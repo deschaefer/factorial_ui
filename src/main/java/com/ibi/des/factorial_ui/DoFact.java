@@ -28,8 +28,10 @@ public class DoFact {
     {
         // sample
         // curl -X GET "http://localhost:9090/calc?value=10" -H "accept: */*"
-
-        String url = "http://localhost:9090/calc";
+        // ifactorial is the name setup up in the kubernetes services. 
+        // this should be externalized. 
+        // Any takers?
+        String url = "http://ifactorial:9090/calc";
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url)
                 .queryParam("value", fvalue);
